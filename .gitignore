@@ -1,3 +1,3 @@
-__pycache__
-log.txt
-test.py
+/CardsManager/__pycache__/
+/CardsManager/log
+/CardsManager/tests
