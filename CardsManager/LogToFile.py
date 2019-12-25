@@ -9,6 +9,7 @@
 # @staticmethod
 import os
 from datetime import datetime
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -25,11 +26,11 @@ def Log(log_info, flag, **kwargs):
     # flag如果为4，则表示修改了电话号码
     elif flag == 4:
         log_info += kwargs['Name'] + '的电话号码从' + \
-            str(kwargs['PRE_TEL']) + '修改为' + str(kwargs['Tel'])
+                    str(kwargs['PRE_TEL']) + '修改为' + str(kwargs['Tel'])
     # flag如果为5，则表示修改了QQ号
     elif flag == 5:
         log_info += kwargs['Name'] + '的QQ号码从' + \
-            str(kwargs['PRE_QQ']) + '修改为' + str(kwargs['QQ'])
+                    str(kwargs['PRE_QQ']) + '修改为' + str(kwargs['QQ'])
     # flag如果为6，则表示读取一个名片
     elif flag == 6:
         log_info += '查看了' + kwargs['Name'] + '的名片'
@@ -39,4 +40,4 @@ def Log(log_info, flag, **kwargs):
     filename = os.path.join(BASE_DIR, 'log.txt')
     with open(filename, 'a+') as f:
         final_log_info = str(datetime.now()) + ":" + log_info
-        f.write(final_log_info+'\n')
+        f.write(final_log_info + '\n')

@@ -1,2 +1,3 @@
 # Python
-Beautiful is better than ugly.
+Beautiful is better than ugly.  
+这里记录了我学习Python以来的点点滴滴...
